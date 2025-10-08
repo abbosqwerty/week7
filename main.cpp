@@ -107,6 +107,85 @@ using namespace std;
 //             while ( click!=2);
 //           }
 
-int main() {
+//Problem 3
 
-}
+
+
+// int calculateFee(int hours) {
+//     int fee = 0;
+//     if (hours <= 2) {
+//         fee = 0;
+//     } else if (hours <= 5) {
+//         fee = (hours - 2) * 2;
+//     } else {
+//         fee = (3 * 2) + (hours - 5) * 5;
+//     }
+//     return fee;
+// }
+//
+// int main() {
+//     int hours;
+//     char choice;
+//
+//
+//     do {
+//         cout << "Enter number of hours parked: ";
+//         cin >> hours;
+//
+//         cout << "Fee: $" << calculateFee(hours) << endl;
+//
+//         cout << "Do you want to calculate another? (y/n): ";
+//         cin >> choice;
+//     } while (choice == 'y' || choice == 'Y');
+//
+//     return 0;
+//
+//     }
+
+
+//Problem 4
+
+
+
+// double calculateBill(int choice, int quantity) {
+//     double price = 0;
+//     switch (choice) {
+//         case 1: price = 10; break;
+//         case 2: price = 8; break;
+//         case 3: price = 5; break;
+//         default: cout << "Invalid choice!\n"; return 0;
+//     }
+//     return price * quantity;
+// }
+//
+// int main() {
+//     int choice, quantity;
+//     double total = 0;
+//     char again;
+//
+//     do {
+//         cout << "Menu:\n";
+//         cout << "1. Pizza - $10\n";
+//         cout << "2. Burger - $8\n";
+//         cout << "3. Salad - $5\n";
+//         cout << "Enter your choice (1-3): ";
+//         cin >> choice;
+//
+//         cout << "Enter quantity: ";
+//         cin >> quantity;
+//
+//         double bill = calculateBill(choice, quantity);
+//         total += bill;
+//
+//         cout << "Current total bill: $" << total << endl;
+//
+//         cout << "Do you want to order more? (y/n): ";
+//         cin >> again;
+//     } while (again == 'y' || again == 'Y');
+//
+//     cout << "Final Total Bill: $" << total << endl;
+//
+//     return 0;
+//
+//
+//     }
