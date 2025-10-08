@@ -189,3 +189,89 @@ using namespace std;
 //
 //
 //     }
+
+//Problem 5 
+
+
+
+bool minimumcheck(string pass) {
+  if (pass.length() >= 8) {
+      return true;
+  }
+  else {
+        return false;
+    }
+}
+bool uppercaasecheck(string pass) {
+    for (int i = 0; i < pass.length(); i++) {
+        if (isupper(pass[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+bool lowercaasecheck(string pass) {
+    for (int i = 0; i < pass.length(); i++) {
+        if (islower(pass[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+bool digitcheck(string pass) {
+    for (int i = 0; i < pass.length(); i++) {
+        if (isdigit(pass[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+bool symbolcheck(string pass) {
+    string sym ="!@#$%^&*()_+";
+    for (int i = 0; i < pass.length(); i++) {
+        for (int j = 0; j < sym.length(); j++) {
+            if (pass[i] == sym[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
+
+}
+
+int main() {
+    string password;
+    cout << "Enter your password: ";
+    cin >> password;
+    if (minimumcheck(password)& uppercaasecheck(password)& lowercaasecheck(password)&digitcheck(password)& symbolcheck(password)) {
+        cout <<"Your password is strong";
+    }
+    else {
+        bool comma = true;
+        cout <<"Weak password: (";
+        if (!minimumcheck(password)) {
+            cout <<(comma ? "":", ");
+            cout <<"the lenght is too short";
+            comma = false;
+        }
+        if (!uppercaasecheck(password)) {
+            cout <<(comma ? "":", ");
+            cout <<"You need one Uppercase letter";
+            comma = false;
+        }
+        if (!lowercaasecheck(password)) {
+            cout <<(comma ? "":", ");
+            cout <<"You need one Lowercase letter";
+            comma = false;
+        }
+        if (!symbolcheck(password)) {
+            cout <<(comma ? "":", ");
+            cout <<"You need  at least one symbol";
+            comma = false;
+        }
+        if (!digitcheck(password)) {
+            cout <<(comma ? "":", ");
+            cout <<"You need at least one digit";
+            comma = false;
+        }
+    }
