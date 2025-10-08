@@ -1,7 +1,8 @@
 #include <iostream>
 #include <sstream>
 #include <cmath>
-using namespace std;
+#include <cctype>
+using namespace std;  
 // void deposit(int& bal, int dep) {
 //
 //             bal+=dep;
